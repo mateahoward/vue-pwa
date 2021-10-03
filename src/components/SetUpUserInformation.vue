@@ -9,7 +9,7 @@
         </v-container>
 
         <v-form @submit.prevent="getInfo">
-          <v-col cols="10" lg="6" md="6" sm="6" xs="10">
+          <v-col>
                 <v-text-field
                     v-model="passedUsername"
                     label="GitHub Username"

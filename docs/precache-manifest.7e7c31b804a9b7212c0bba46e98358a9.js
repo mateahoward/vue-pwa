@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-pwa/css/chunk-vendors.2cdb83e0.css"
   },
   {
-    "revision": "236a03203613e29904bfed5534b0e52e",
+    "revision": "465e268aa80796be018818f8053e3611",
     "url": "/vue-pwa/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-pwa/js/about.b348b950.js"
   },
   {
-    "revision": "2a8f3ceaf69b66e722d7",
-    "url": "/vue-pwa/js/app.1281ab32.js"
+    "revision": "598fa3375c5ed46c5172",
+    "url": "/vue-pwa/js/app.40dcaea4.js"
   },
   {
     "revision": "5e0d20dc78957bfec324",
