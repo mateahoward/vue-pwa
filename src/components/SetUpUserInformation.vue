@@ -8,23 +8,23 @@
             </v-col>
         </v-container>
 
-        <v-form>
-          <v-col>
+        <v-form @submit.prevent="getInfo">
+          <v-col cols="10" lg="6" md="6" sm="6" xs="10">
                 <v-text-field
                     v-model="passedUsername"
                     label="GitHub Username"
                     solo
                 ></v-text-field>
           </v-col>
-        </v-form>
 
-        <v-container>
-            <v-btn @click="getInfo" large class="fab white--text" color="cyan">
+          <v-col>
+            <v-btn type="submit" large class="fab white--text" color="cyan">
                 <v-icon small left>mdi-magnify</v-icon>
                 <span>Search</span>
              </v-btn>
-        </v-container>
+          </v-col>
 
+        </v-form>
     </v-main>
 </template>
 
