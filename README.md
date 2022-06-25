@@ -9,7 +9,7 @@ This project allows us to see publicly available information for any GitHub Prof
 - Vuetify 2.4.0
 - Cypress 10.2
 
-* available as a PWA *
+** available as a PWA **
 
 
 ## What it looks like:
