@@ -1,24 +1,13 @@
-# vue-pwa
+# GitHub Profile Checker
 
-## Project setup
-```
-npm install
-```
+This project allows us to see publicly available information for any GitHub Profile.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![image](https://user-images.githubusercontent.com/51357920/175785856-1a2bd6e0-99a8-497b-b452-35aa14971ba4.png)
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Tools & Technologies used
+
+- Vue 
+- Vuetify 
+- Cypress 
