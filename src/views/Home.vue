@@ -1,10 +1,13 @@
 <template>
-  <v-container class="d-flex justify-center flex-row align-center flex-wrap">
-    <v-col cols="10" lg="6" sm="10" xs="10" class="mb-4">
+  <v-container class="d-flex justify-center flex-row flex-wrap">
+    <v-col cols="12" lg="6" sm="10" xs="12" class="mb-4">
       <set-up-user-information @hasUserData="populateData"></set-up-user-information>
     </v-col>
-    <v-col cols="10" lg="6" sm="10" xs="10">
-      <user-card v-if="componentHasUserData" :user="user" :pullRequests="pullRequests"></user-card>
+    <v-col cols="12" lg="6" sm="10" xs="12">
+      <user-card 
+        v-if="componentHasUserData" 
+        :user="user" 
+      ></user-card>
     </v-col>
 
   </v-container>
@@ -25,17 +28,13 @@ import UserCard from '../components/UserCard.vue'
     data() {
       return {
         user: [],
-        pullRequests: '',
         componentHasUserData: false
       }
     },
 
    methods: {
      populateData(passedObject) {
-
        this.user = passedObject[0];
-       this.pullRequests = passedObject[1];
-
        this.componentHasUserData = true;
      }
    }, 

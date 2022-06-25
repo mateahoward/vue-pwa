@@ -1,5 +1,5 @@
 <template>
-    <v-main class="d-flex flex-column">
+    <v-col class="d-flex flex-column">
 
         <v-container class="d-flex justify-center align-center">
             <v-col>
@@ -14,18 +14,20 @@
                     v-model="passedUsername"
                     label="GitHub Username"
                     solo
+                    autocomplete="off"
+                    aria-label="Github Username"
                 ></v-text-field>
           </v-col>
 
           <v-col>
-            <v-btn type="submit" large class="fab white--text" color="cyan">
+            <v-btn type="submit" large class="fab white--text" color="cyan darken-4">
                 <v-icon small left>mdi-magnify</v-icon>
                 <span>Search</span>
              </v-btn>
           </v-col>
 
         </v-form>
-    </v-main>
+    </v-col>
 </template>
 
 <script>
@@ -38,43 +40,27 @@ export default {
            passedUsername: '' ,
 
             user: {
-                name: '',
-                profileImage: '',
-                profileURL: '',
+
             },
             pullRequests: 0
-
-            
         }
     },
 
     methods: {
        getInfo() {
 
-           let newResponse = [];
 
-           let api = 'https://api.github.com/users/' + this.passedUsername + '/events/public';
+            let api = 'https://api.github.com/users/' + this.passedUsername;
+
 
             axios.get(api).then((response) => {
 
-            newResponse = response.data;
+            this.user = response.data;
 
-            this.pullRequests = newResponse.length;
-
-              newResponse.forEach(element => {
-                  if(element.type === 'PullRequestEvent') {
-
-                      this.user.name = element.actor.display_login;
-                      this.user.profileImage = element.actor.avatar_url;
-                      this.user.profileURL = element.actor.url;
-
-                  }
-              });
             }).then(() => {
 
                 let passedObject = [
                     this.user,
-                    this.pullRequests
                 ]
                 this.$emit('hasUserData', passedObject)
             }) 
